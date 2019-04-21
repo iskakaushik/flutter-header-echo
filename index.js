@@ -1,18 +1,16 @@
-const http = require('http');
-
-const hostname = '127.0.0.1';
 const PORT = process.env.PORT || 5000;
 
-const server = http.createServer(function (request, response) {
-    request.addListener('end', function () {
-        response.writeHead(200, {
-            'Content-Type': 'text/plain'
-        });
-        response.write(sys.inspect(request));
-        response.end();
-    });
+var express = require('express');
+var http = require('http');
+var pretty = require('express-prettify');
+var app = express();
+
+app.use(pretty({ query: 'pretty' }));
+
+app.get('/', function (req, res) {
+    res.status(200);
+    res.setHeader('Content-Type', 'application/json');
+    res.json(req.headers);
 });
 
-server.listen(PORT, () => {
-    console.log(`Server running on ${PORT}/`);
-});
+http.createServer(app).listen(PORT);
