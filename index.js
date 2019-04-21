@@ -9,7 +9,6 @@ app.use(pretty({ query: 'pretty' }));
 
 app.get('/', function (req, res) {
     res.status(200);
-    res.setHeader('Content-Type', 'application/json');
     res.json(req.headers);
 });
 
