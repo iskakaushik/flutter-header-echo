@@ -1,0 +1,19 @@
+{
+  "name": "flutter-header-echo",
+  "version": "0.1.0",
+  "description": "Echoes HTTP Request Headers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iskakaushik/flutter-header-echo.git"
+  },
+  "author": "Kaushik Iska",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iskakaushik/flutter-header-echo/issues"
+  },
+  "homepage": "https://github.com/iskakaushik/flutter-header-echo#readme"
+}
